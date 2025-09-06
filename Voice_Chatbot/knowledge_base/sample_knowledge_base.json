@@ -1,0 +1,42 @@
+[
+    {
+      "question": "What is a FAQ chatbot?",
+      "answer": "A FAQ chatbot is an automated system designed to answer frequently asked questions based on a knowledge base. It uses natural language processing to understand user queries and provide relevant answers without human intervention."
+    },
+    {
+      "question": "How does this chatbot work?",
+      "answer": "This chatbot works by matching your questions against a knowledge base of pre-defined Q&A pairs. It also uses Azure OpenAI API to generate responses for questions not explicitly covered in the knowledge base, while maintaining context throughout the conversation."
+    },
+    {
+      "question": "Can I add my own questions and answers?",
+      "answer": "Yes, you can upload your own knowledge base in various formats including TXT, CSV, JSON, or JSONL files. The system will parse these files and use them to answer questions."
+    },
+    {
+      "question": "What file formats are supported for the knowledge base?",
+      "answer": "The chatbot supports multiple file formats: TXT (with Q&A pairs separated by double newlines), CSV (with 'question' and 'answer' columns), JSON (an array of objects with 'question' and 'answer' fields), and JSONL (JSON Lines format with one Q&A pair per line)."
+    },
+    {
+      "question": "How do I start a new conversation?",
+      "answer": "To start a new conversation, click the 'New Chat' button in the sidebar. This will clear the current conversation history and allow you to start fresh."
+    },
+    {
+      "question": "Is my conversation history saved?",
+      "answer": "Your conversation history is maintained within the current session but is not permanently stored on any server. When you refresh the page or start a new session, the conversation history will be reset."
+    },
+    {
+      "question": "What is Azure OpenAI API?",
+      "answer": "Azure OpenAI API is Microsoft's cloud-based service that provides access to OpenAI's language models with the security and enterprise features of Azure. It allows developers to integrate AI capabilities into their applications."
+    },
+    {
+      "question": "How do I set up the Azure OpenAI API?",
+      "answer": "To set up the Azure OpenAI API, you need to provide three pieces of information in the sidebar: your API Key, Azure Endpoint URL, and Deployment Name. These can be obtained from your Azure OpenAI Service resource."
+    },
+    {
+      "question": "What should I do if the chatbot doesn't answer my question correctly?",
+      "answer": "If the chatbot doesn't provide a satisfactory answer, try rephrasing your question or being more specific. The quality of answers depends on both the knowledge base content and the AI model's capabilities."
+    },
+    {
+      "question": "Can the chatbot learn from my interactions?",
+      "answer": "This implementation doesn't include dynamic learning capabilities. The chatbot can only reference the knowledge base that has been uploaded and use the Azure OpenAI API for generating responses based on that information and the conversation context."
+    }
+  ]

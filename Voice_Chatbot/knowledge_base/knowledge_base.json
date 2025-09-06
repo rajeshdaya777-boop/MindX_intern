@@ -1,0 +1,24 @@
+{
+    "faqs": [
+        {
+            "question": "What services do you offer?",
+            "answer": "We offer a range of services including AI consulting, custom software development, and cloud solutions. Our team specializes in creating innovative solutions tailored to your business needs."
+        },
+        {
+            "question": "How can I contact support?",
+            "answer": "You can reach our support team at support@example.com or call us at +1-555-123-4567 during business hours (9 AM - 5 PM EST)."
+        },
+        {
+            "question": "What are your business hours?",
+            "answer": "Our business hours are Monday through Friday, 9:00 AM to 5:00 PM EST. We are closed on weekends and major holidays."
+        },
+        {
+            "question": "Do you offer free consultations?",
+            "answer": "Yes, we offer a free 30-minute consultation to discuss your project requirements and how we can help you achieve your goals."
+        },
+        {
+            "question": "What payment methods do you accept?",
+            "answer": "We accept all major credit cards, PayPal, and bank transfers. Payment terms can be discussed during the project planning phase."
+        }
+    ]
+} 

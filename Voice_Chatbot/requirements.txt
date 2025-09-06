@@ -1,0 +1,9 @@
+requests
+pyaudio
+wave
+sounddevice
+numpy
+pyttsx3
+fuzzywuzzy
+python-dotenv
+SpeechRecognition

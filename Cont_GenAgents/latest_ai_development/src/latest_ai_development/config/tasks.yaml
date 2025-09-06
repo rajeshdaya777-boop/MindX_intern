@@ -1,0 +1,73 @@
+# config/tasks.yaml
+# Define your tasks with their descriptions and expected outputs.
+# The 'agent' key will be assigned in crew.py using the agent's definition.
+
+research_task:
+  description: |
+    Conduct extensive web research on '{topic}'.
+    Identify key trends, statistics, emerging technologies, and expert opinions relevant to the topic.
+    Summarize findings into a concise report with actionable insights and relevant data points.
+    Prioritize reliable and authoritative sources.
+  expected_output: "A detailed research summary in markdown format, outlining key facts, figures, and insights about '{topic}', including source URLs where appropriate."
+  # output_file: 'output/research_summary.md' # Defined in crew.py for dynamic paths
+
+planning_task:
+  description: |
+    Based on the research summary, create a detailed content plan for a '{content_type}'.
+    The plan should include:
+    - A compelling title idea for the content.
+    - Analysis of the target audience for this content type.
+    - Main objective of the content (e.g., inform, persuade, engage, drive traffic).
+    - A structured outline with clear headings and subheadings (e.g., for a blog post, or key points for social media).
+    - Essential talking points/messages to be conveyed in each section.
+    - Desired tone and style (e.g., informative, conversational, persuasive, professional).
+    - Relevant keywords identified during research to be incorporated.
+  expected_output: "A comprehensive content plan/outline in markdown, tailored for a '{content_type}', specifying structure, key messages, target audience, tone, and relevant keywords."
+  # output_file: 'output/content_plan.md'
+
+drafting_task:
+  description: |
+    Draft the full content based on the provided content plan and research.
+    Write engaging and high-quality copy that adheres strictly to the specified tone, style, and structure.
+    Ensure all key points from the plan are covered effectively and naturally.
+    Word count guidelines: For a blog post, aim for 800-1200 words. For social media (LinkedIn, Facebook), be concise and impactful, adhering to platform best practices for length.
+  expected_output: "The first draft of the content, fully written and structured according to the plan and content type requirements, in markdown format."
+  # output_file: 'output/first_draft.md'
+
+refining_task:
+  description: |
+    Review and refine the content draft for grammatical errors, spelling mistakes, clarity, conciseness, and stylistic consistency.
+    Improve sentence structure, word choice, and overall readability.
+    Ensure the tone aligns perfectly with the content plan and brand guidelines.
+    Provide specific, actionable suggestions for improvement if major revisions are needed, or apply minor edits directly.
+  expected_output: "A refined version of the content, free of grammatical errors, stylistic inconsistencies, and significantly improved for clarity and readability, in markdown format."
+  # output_file: 'output/refined_content.md'
+
+seo_optimization_task:
+  description: |
+    Optimize the refined content for search engines.
+    Strategically integrate target keywords (from research/plan) naturally throughout the text without keyword stuffing.
+    Suggest an SEO-friendly title and meta description (max 160 characters).
+    Ensure headings and subheadings are optimized for search engines and user experience.
+    If the content type allows, suggest internal/external linking opportunities.
+  expected_output: "The SEO-optimized content, ready for final review, including suggested meta title and description, in markdown format. Clearly highlight any keywords integrated."
+  # output_file: 'output/seo_optimized_content.md'
+
+evaluation_task:
+  description: |
+    Conduct a final quality assurance check on the SEO-optimized content.
+    Verify factual accuracy, tone, adherence to initial requirements (topic, content type), and overall effectiveness in achieving its goal.
+    Assess its readiness for publication.
+    Output 'APPROVED' if the content is ready for the final formatting and publishing stage. If not, provide a comprehensive, detailed list of required revisions, explaining what needs to be changed and why.
+  expected_output: "A clear 'APPROVED' if the content is fully ready for publication, or a detailed report of 'REVISIONS REQUIRED' with specific actionable feedback for the content_formatter."
+  # output_file: 'output/evaluation_report.md'
+
+final_formatting_task: # Previously 'reporting_task' or 'content_generator'
+  description: |
+    Take the APPROVED content and format it specifically for '{content_type}' as per user needs.
+    - If 'blog_post': Format as clean Markdown for a blog, including title, headings, paragraphs, and any suggested images/media.
+    - If 'linkedin_post': Format as a concise, professional text post (150-250 words), including relevant hashtags, a clear call-to-action, and consideration for line breaks.
+    - If 'facebook_post': Format as a friendly, conversational text post (100-200 words), with engaging questions, relevant hashtags, and a suggested image concept.
+    This is the final output, ready for immediate use/publishing.
+  expected_output: "The final, ready-to-publish content, perfectly formatted for '{content_type}', in the specified output format (e.g., Markdown for blog, plain text for social media)."
+  output_file: 'output/final_content_for_{content_type}.md'

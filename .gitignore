@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+
+# Virtual environments
+
+.env
+.env/
+.venv/
+env/
+venv/
+
+# Poetry files
+poetry.lock
+# Uncomment if you don't want to track the virtualenv
+# .python-version
+
+# Logs
+*.log
+app.log
+
+# Docker
+*.pid
+*.tar
+*.gz
+*.swp
+*.bak
+*.tmp
+docker-compose.override.yml
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# VS Code & IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# System files
+.DS_Store
+Thumbs.db
+qck_ref.txt
+mlruns/
+temp_files/
